@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    /* This ensures a smooth transition both when the class is added and removed */
+    transition: opacity 0.25s ease-in-out; 
+}
+
+
+.page-transition {
+  opacity: 0;
+  background-color: black;
+  filter: blur(12px);
+  transform: translateY(500px);
+  transition: opacity .25s ease-in-out;
+
+}
+
+.animate-scroll {
+  animation-timeline: view();
+}
