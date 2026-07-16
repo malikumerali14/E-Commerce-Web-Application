@@ -81,6 +81,10 @@ app.use('/api/admin/products', adminProductRoutes)
 app.use('/api/admin/orders', adminOrderRoutes)
 
 
-app.listen(port, () => {
-    console.log(`Server app listening on port ${port}`)
-})
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(port, () => {
+        console.log(`Server app listening on port ${port}`)
+    })
+}
+
+module.exports = app;
